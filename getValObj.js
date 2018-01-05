@@ -8,7 +8,9 @@ var emp = {
 }
 
 var getValueOfObj = function(obj, path){
-    for (var i=0, path=path.split('.'), len=path.length; i<len; i++){
+    var path = path.split('.');
+    var len = path.length;
+    for (var i=0; i<len; i++){
         obj = obj[path[i]];
     };
     if (obj == undefined){
